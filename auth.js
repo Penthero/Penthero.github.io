@@ -34,13 +34,15 @@
 		if (authResult && !authResult.error) {
 			// Authorization was successful. Hide authorization prompts and show
 			// content that should be visible after authorization succeeds.
+			$('#loginDiv').html("");
 			$('.pre-auth').hide();
 			$('.post-auth').show();
 			loadAPIClientInterfaces();
 		} else {
 			// Make the #login-link clickable. Attempt a non-immediate OAuth 2.0
 			// client flow. The current function is called when that flow completes.
-			$('#login-link').attr('disabled', false);
+			
+			$('#loginDiv').append("<button id=\"login-link\">Choose Account</button>");
 			$('#login-link').click(function() {
 				$('#search-container').html("");
 				gapi.auth.authorize({
