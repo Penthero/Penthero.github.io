@@ -42,6 +42,7 @@
 			// client flow. The current function is called when that flow completes.
 			$('#login-link').attr('disabled', false);
 			$('#login-link').click(function() {
+				$('#search-container').html("");
 				gapi.auth.authorize({
 					client_id: OAUTH2_CLIENT_ID,
 					scope: OAUTH2_SCOPES,
