@@ -1,0 +1,8 @@
+Vilka API'er: Youtube (Google), whatthetrend.com
+
+Appen går ut på att hämta ut den dagliga datan från whatthetrend.com angående vad som trendar på twitter.
+Efter denna data hämtats ut så genomförs en youtube sökning för att hämta relevanta klipp av det som trendar.
+
+Det första appen gör är att kontakta whatthetrend.com via deras API och hämta ut den dagliga datan.
+Efter det går datan via googles API till youtube. I detta fall används deras gapi-objekt för att underlätta med OAuth och behandling av deras data.
+Efter det är genomfört så kommer sidan skriva ut de relevanta klippen embäddade i sidan så man kan kolla på dem direkt.
