@@ -17,7 +17,6 @@ function getTrendyYoutube() {
   
 	.done(function( data ) {
 		for(var i = 0; i < data.trends.length; ++i) {
-			console.log(data.trends[i].query);
 			queue.push(data.trends[i].query)
 		}
 		search(queue[queue.length-1]);
