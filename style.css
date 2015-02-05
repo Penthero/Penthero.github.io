@@ -1,0 +1,6 @@
+body{ background-color: lightgrey}
+#main { margin: auto; width: 1400px; min-height: 400px;  background-color: white; border: 1px solid grey; border-radius: 6px; }
+iframe { margin: 20px; }
+#loginDiv { width: 50px; margin: auto; margin-top: 20px;}
+.videoRow { border-bottom: 1px solid grey; padding: 3px; }
+h2 { margin-left: 30px; }
