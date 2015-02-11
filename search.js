@@ -43,7 +43,8 @@ function search(query) {
 		div.className = "videoRow";
 		$(div).append(h2);
 		for(var i = 0; i < items.length && i < 3; ++i) {
-			div.innerHTML += '<iframe width="420" height="315" src="http://www.youtube.com/embed/'+items[i].id.videoId+'"></iframe>';
+			if(typeof items[i].id.videoId !== "undefined")
+				div.innerHTML += '<iframe width="420" height="315" src="http://www.youtube.com/embed/'+items[i].id.videoId+'"></iframe>';
 		}
 		if(items.length > 0)
 			$('#search-container').append(div);
